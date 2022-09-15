@@ -7,5 +7,3 @@ def draw_school():
     | [] .-.-. [] |
     |____|_|_|____|""")
     return
-
-draw_school()
