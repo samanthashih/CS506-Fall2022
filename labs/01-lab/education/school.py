@@ -1,3 +1,9 @@
 def draw_school():
-    print("school not found")
+    print(r"""
+           .
+          /_\
+    .-----' '-----.
+   /_____[BU]______\
+    | [] .-.-. [] |
+    |____|_|_|____|""")
     return
