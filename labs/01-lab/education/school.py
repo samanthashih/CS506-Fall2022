@@ -1,3 +1,11 @@
 def draw_school():
-    print("Boston University")
+    print(r"""
+           .
+          /_\
+    .-----' '-----.
+   /_____[BU]______\
+    | [] .-.-. [] |
+    |____|_|_|____|""")
     return
+
+draw_school()
