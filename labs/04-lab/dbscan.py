@@ -21,7 +21,21 @@ class DBC():
         assignment should match the index of the data point
         in the dataset.
         """
-        return
+        assignments = [0 for _ in range(len(self.dataset))] # assignment[point] = 0 means that point was not assigned
+        label = 1
+
+        for P in range(len(self.dataset)):
+          if assignments[P] != 0: # if Point already assigned
+            continue
+          
+          if len(self.eps_neighborhood(P)) >= self.min_pts:
+            # we found a core point
+            assignments = self.create_cluster_from(P, assignments, label)
+            label += 1
+
+
+        return assignments
+
 
 clustering = DBC(X, 3, .2).dbscan()
 colors = np.array([x for x in 'bgrcmykbgrcmykbgrcmykbgrcmyk'])
